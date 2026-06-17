@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Premium Mega Menu Shop</title>
+    <link href="https://fonts.googleapis.com/css2?family=Sarabun:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header>
+    <div class="navbar-container">
+        <div class="logo">
+            <h2><i class="fas fa-bolt"></i> IT Shop</h2>
+        </div>
+
+        <div class="menu-toggle" id="mobile-menu-btn">
+            <i class="fas fa-bars"></i>
+        </div>
+
+        <nav id="nav-menu">
+            <ul class="menu">
+                <li><a href="#" class="menu-link">หน้าแรก</a></li>
+
+                <li class="mega-menu">
+                    <a href="#" class="menu-link">สินค้า <i class="fas fa-angle-down drop-icon"></i></a>
+
+                    <div class="mega-content-wrapper">
+                        <div class="mega-content">
+                            <div class="column">
+                                <h3><i class="fas fa-desktop"></i> คอมพิวเตอร์</h3>
+                                <a href="#">Desktop PC <span class="badge hot">Hot</span></a>
+                                <a href="#">Gaming PC</a>
+                                <a href="#">Mini PC</a>
+                                <a href="#">Workstation</a>
+                            </div>
+
+                            <div class="column">
+                                <h3><i class="fas fa-laptop"></i> โน้ตบุ๊ก</h3>
+                                <a href="#">Gaming Notebook</a>
+                                <a href="#">Business Notebook</a>
+                                <a href="#">Ultrabook <span class="badge new">New</span></a>
+                                <a href="#">MacBook</a>
+                            </div>
+
+                            <div class="column">
+                                <h3><i class="fas fa-wifi"></i> อุปกรณ์เครือข่าย</h3>
+                                <a href="#">Router Wifi 6</a>
+                                <a href="#">Switch Hub</a>
+                                <a href="#">Access Point</a>
+                                <a href="#">Firewall</a>
+                            </div>
+
+                            <div class="column">
+                                <h3><i class="fas fa-keyboard"></i> อุปกรณ์เสริม</h3>
+                                <a href="#">Mechanical Keyboard</a>
+                                <a href="#">Gaming Mouse</a>
+                                <a href="#">Wireless Headset</a>
+                                <a href="#">4K Webcam</a>
+                            </div>
+
+                            <div class="promo-card">
+                                <div class="promo-img-box">
+                                    <img src="https://picsum.photos/400/250" alt="Promotion">
+                                    <div class="promo-tag">Flash Sale</div>
+                                </div>
+                                <div class="promo-detail">
+                                    <h3>🔥 โปรโมชั่นพิเศษ</h3>
+                                    <p>อัปเกรดสเปกคอมแรง สะใจลดสูงสุด 50% วันนี้เท่านั้น</p>
+                                    <a href="#" class="promo-btn">ช้อปเลย <i class="fas fa-arrow-right"></i></a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </li>
+
+                <li><a href="#" class="menu-link">โปรโมชั่น</a></li>
+                <li><a href="#" class="menu-link">บทความ</a></li>
+                <li><a href="#" class="menu-link">ติดต่อเรา</a></li>
+            </ul>
+        </nav>
+    </div>
+</header>
+
+<script>
+    const mobileMenuBtn = document.getElementById('mobile-menu-btn');
+    const navMenu = document.getElementById('nav-menu');
+
+    mobileMenuBtn.addEventListener('click', () => {
+        navMenu.classList.toggle('active');
+        // เปลี่ยนไอคอนระหว่าง แฮมเบอร์เกอร์ กับ กากบาท
+        const icon = mobileMenuBtn.querySelector('i');
+        icon.classList.toggle('fa-bars');
+        icon.classList.toggle('fa-times');
+    });
+</script>
+
+</body>
+</html>
